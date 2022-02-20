@@ -28,7 +28,7 @@ jobs:
       - run:
           name: "Bundle fix"
           command: gem update bundler
-      - bundle/bundle-install
+      - bundler/install
       - run:
           name: "Build site"
           command: bundle exec jekyll build --trace --lsi --strict_front_matter --profile
