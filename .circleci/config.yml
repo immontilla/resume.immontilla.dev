@@ -9,7 +9,7 @@ references:
     run:
       name: Upload to s3
       command: |
-        aws s3 sync ~/www/jekyll/_site/ "s3://$S3_BUCKET_NAME" --delete
+        aws s3 sync . "s3://$S3_BUCKET_NAME" --delete
   clear_cloudfront_cache: &clear_cloudfront_cache
     run:
       name: Clear CloudFront cache
@@ -35,9 +35,9 @@ jobs:
           name: "Build site"
           command: bundle exec jekyll build --trace --lsi --strict_front_matter --profile
       - persist_to_workspace:
-          root: workspace
+          root: _site
           paths:
-            - "jekyll"
+            - ""
   deploy:
     executor: aws-executor
     environment:
@@ -45,7 +45,7 @@ jobs:
       CLOUD_FRONT_DIST_ID: E30QX8NN7CCY2R
     steps:
       - attach_workspace:
-          at: /tmp/jekyll
+          at: ~/www/_site
       - aws-cli/setup:
           profile-name: default
       - *deploy_to_s3
