@@ -1,0 +1,139 @@
+name: Mauricio Montilla
+support_dark_mode: true
+fork: false
+
+contact:
+  email: mauricio@immontilla.dev
+  github: immontilla
+  linkedin: immontilla
+  phone:
+  gitlab:
+  twitter:
+
+languages:
+  - idiom: Spanish
+    code: es
+  - idiom: English
+    code: gb
+
+education:
+  - degree: MSc in Computer Science
+    time: 2018-2020
+    university: University College Dublin
+    country: ie
+
+  - degree: BSc in Computer Science
+    time: 1997-2002
+    university: Universidad Santiago de Cali
+    country: co
+
+skills:
+  - category: Backend
+    skill:
+      - Java
+      - Python
+  - category: Frontend
+    skill:
+      - Angular
+      - Typescript
+  - category: Relational databases
+    skill:
+      - Oracle
+      - MySQL
+      - PostgreSQL
+  - category: Non-Relational databases
+    skill:
+      - ElasticSearch
+      - Redis
+      - MongoDB
+  - category: AWS
+    skill:
+      - EKS
+      - EC2
+      - S3
+  - category: DevOps
+    skill:
+      - Docker
+      - Kubernetes
+      - Helm
+
+profile: |
+  Highly experienced software engineer who enjoy solving problems and building modern IT solutions. Team player. Eager to learn and share its expertise.
+
+experience:
+  - role: Senior Software Engineer
+    time: Jun.2014-Present
+    company: Vass. Madrid, Spain.
+    country: es
+    details: |
+      Building and maintaining software solutions in Telefonica Spain, Denizen Financial, Carrefour Financial Services, Redsys and Dia Group.
+    technologies_used: |
+      <br/>- Telefonica Spain: Java. Spring. Oracle. Maven. Git. Jenkins. Bash.
+      <br/>- Dia Group: Java. Spring. Quarkus. Spring Boot. MySQL. ElasticSearch. Maven. TypeScript. Angular. Git. JenkinsX. Kubernetes.
+      <br/>- Redsys: Java. Spring. Oracle. Maven. SVN. Bash.
+      <br/>- Carrefour Financial Services: Java. Spring Boot. Oracle. Maven. Git.
+      <br/>- Denizen: JavaScript. HappyJS. MongoDB. Git. Jenkins. Kubernetes. ELK.
+      <br/>- Telefonica Spain: Java. Spring. AngularJS. Oracle. Maven. SVN. Bash.
+
+  - role: Contractor
+    time: Apr.2013-Mar.2014
+    company: Instituto Andaluz del Patrimonio Histórico. Seville, Spain.
+    country: es
+    details: |
+      Data migration and web portal building.
+    technologies_used: |
+      Java. Struts. PL/SQL. Tomcat. SVN. Maven. Eclipse.
+
+  - role: Software engineer
+    time: Jan.2011-Aug.2012
+    company: Fujitsu Technology Solutions. Seville. Spain.
+    country: es
+    details: |
+      Web application development and maintenance.
+    technologies_used: |
+      Java. ADF. Oracle. PL/SQL. JDeveloper. SVN.
+
+  - role: Software engineer
+    time: Jun.2008-Dec.2010
+    company: Sopra Group. Seville. Spain.
+    country: es
+    details: |
+      Data migration and web application development.
+    technologies_used: |
+      Java. ADF. Oracle. PL/SQL. JDeveloper. Toad. SVN.
+
+  - role: Software engineer
+    time: Sep.2007-May.2008
+    company: Darmsoft. Cali, Colombia.
+    country: co
+    details: |
+      Web application development and support.
+    technologies_used: |
+      PHP. Oracle. HTML. CSS. JavaScript.
+
+  - role: Software engineer
+    time: Jan.2007-Aug.2007
+    company: Play Technologies. Cali, Colombia.
+    country: co
+    details: |
+      Web application development.
+    technologies_used: |
+      Java. PHP. PostgreSQL. HTML. CSS. JavaScript.
+
+  - role: Help-Desk
+    time: Apr.2006-Dec.2006
+    company: Sociedad Colombiana de Juegos y Apuestas. Cali, Colombia.
+    country: co
+    details: |
+      Application support and report building.
+    technologies_used: |
+      PHP. SQL. HTML. CSS. JavaScript. Apache.
+
+  - role: Software Engineer
+    time: Feb.2003-Mar.2006
+    company: Futuro Apuestas de Colombia. Cali, Colombia.
+    country: co
+    details: |
+      Application analysis, design and development. User training.
+    technologies_used: |
+      VB6. SQL Server. T-SQL. Visual Studio.

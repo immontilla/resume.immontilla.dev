@@ -1,0 +1,59 @@
+references:
+  container_config: &container_config
+    working_directory: ~/www/
+    docker:
+      - image: cimg/ruby:3.1.0-browsers
+  deploy_to_s3: &deploy_to_s3
+    run:
+      name: Upload to s3
+      command: |
+        aws s3 sync _site/ "s3://$S3_BUCKET_NAME" --delete
+  clear_cloudfront_cache: &clear_cloudfront_cache
+    run:
+      name: Clear CloudFront cache
+      command: |
+        aws cloudfront create-invalidation --distribution-id "$CLOUD_FRONT_DIST_ID" --paths '/*'
+
+version: 2.1
+
+orbs:
+  aws-cli: circleci/aws-cli@2.0.6
+  bundler: boxt/bundler@0.7.0
+
+jobs:
+  build:
+    <<: *container_config
+    steps:
+      - checkout
+      - run:
+          name: "Bundle fix"
+          command: gem update bundler
+      - bundle/bundle-install
+      - run:
+          name: "Build site"
+          command: bundle exec jekyll build --trace --lsi --strict_front_matter --profile
+  deploy:
+    <<: *container_config
+    executor: aws-cli/default
+    environment:
+      S3_BUCKET_NAME: resume.immontilla.dev
+      CLOUD_FRONT_DIST_ID: E30QX8NN7CCY2R
+    steps:
+      - aws-cli/setup:
+          profile-name: default
+      - *deploy_to_s3
+      - *clear_cloudfront_cache
+
+workflows:
+  version: 2
+  build-and-deploy:
+    jobs:
+      - build
+      - deploy:
+          requires:
+            - build
+          context: aws-resume-immontilla-dev-context
+          filters:
+            branches:
+              only:
+                - master

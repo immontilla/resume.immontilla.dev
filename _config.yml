@@ -1,0 +1,12 @@
+title: Iv&aacute;n Mauricio Montilla Figueroa
+description: Iv&aacute;n Mauricio Montilla Figueroa
+url: https://resume.immontilla.dev
+baseurl: ""
+theme_skin: blue
+
+sass:
+  sass_dir: _sass
+  style: compressed
+
+plugins:
+  - jekyll-minifier
