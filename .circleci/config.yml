@@ -1,13 +1,15 @@
-references:
-  container_config: &container_config
-    working_directory: ~/www/
+executors:
+  aws-executor:
     docker:
       - image: cimg/ruby:3.1.0-browsers
+    working_directory: /tmp
+
+references:
   deploy_to_s3: &deploy_to_s3
     run:
       name: Upload to s3
       command: |
-        aws s3 sync ~/www/_site/ "s3://$S3_BUCKET_NAME" --delete
+        aws s3 sync /tmp/jekyll/_site/ "s3://$S3_BUCKET_NAME" --delete
   clear_cloudfront_cache: &clear_cloudfront_cache
     run:
       name: Clear CloudFront cache
@@ -22,7 +24,7 @@ orbs:
 
 jobs:
   build:
-    <<: *container_config
+    executor: aws-executor
     steps:
       - checkout
       - run:
@@ -32,18 +34,22 @@ jobs:
       - run:
           name: "Build site"
           command: bundle exec jekyll build --trace --lsi --strict_front_matter --profile
+      - persist_to_workspace:
+          root: workspace
+          paths:
+            - "jekyll"
   deploy:
-    <<: *container_config
-    executor: aws-cli/default
+    executor: aws-executor
     environment:
       S3_BUCKET_NAME: resume.immontilla.dev
       CLOUD_FRONT_DIST_ID: E30QX8NN7CCY2R
     steps:
+      - attach_workspace:
+          at: /tmp/jekyll
       - aws-cli/setup:
           profile-name: default
       - *deploy_to_s3
       - *clear_cloudfront_cache
-
 
 workflows:
   version: 2
