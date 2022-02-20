@@ -2,14 +2,14 @@ executors:
   aws-executor:
     docker:
       - image: cimg/ruby:3.1.0-browsers
-    working_directory: /tmp
+    working_directory: ~/www/
 
 references:
   deploy_to_s3: &deploy_to_s3
     run:
       name: Upload to s3
       command: |
-        aws s3 sync /tmp/jekyll/_site/ "s3://$S3_BUCKET_NAME" --delete
+        aws s3 sync ~/www/jekyll/_site/ "s3://$S3_BUCKET_NAME" --delete
   clear_cloudfront_cache: &clear_cloudfront_cache
     run:
       name: Clear CloudFront cache
