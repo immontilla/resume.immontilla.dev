@@ -41,8 +41,8 @@ jobs:
   deploy:
     executor: aws-executor
     environment:
-      S3_BUCKET_NAME: resume.immontilla.dev
-      CLOUD_FRONT_DIST_ID: E30QX8NN7CCY2R
+      S3_BUCKET_NAME: AWS_S3_BUCKET_NAME
+      CLOUD_FRONT_DIST_ID: AWS_CLOUD_FRONT_DIST_ID
     steps:
       - attach_workspace:
           at: ~/www/_site
