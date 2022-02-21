@@ -59,9 +59,9 @@ workflows:
     jobs:
       - build
       - deploy:
+          context: aws-resume-immontilla-dev-context
           requires:
             - build
-          context: aws-resume-immontilla-dev-context
           filters:
             branches:
               only:
