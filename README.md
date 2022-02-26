@@ -1,5 +1,6 @@
 [![GitHub latest commit](https://badgen.net/github/last-commit/immontilla/resume.immontilla.dev)](#)
 [![CircleCI](https://circleci.com/gh/immontilla/resume.immontilla.dev/tree/master.svg?style=shield)](#)
+[![Jekyll](https://img.shields.io/badge/Powered%20by-Jekyll-blue)](#)
 [![Website resume.immontilla.dev](https://img.shields.io/website-up-down-green-red/https/resume.immontilla.dev.svg)](https://resume.immontilla.dev/)
 
 # resume.immontilla.dev
