@@ -61,8 +61,17 @@ profile: |
   Highly experienced software engineer who enjoy solving problems and building modern IT solutions. Team player. Eager to learn and share its expertise.
 
 experience:
+  - role: Java Developer
+    time: Mar.2023-Present
+    company: OSP - Otto Group Solution Provider. Madrid, Spain.
+    country: es
+    details: |
+      Working in Logistics for WMS K.Motion.
+    technologies_used: |
+      Oracle Database. Jenkins. Java. Apache Kafka. Maven. Spring Boot
+
   - role: Senior Software Engineer
-    time: Jun.2014-Present
+    time: Jun.2014-Mar.2023
     company: Vass. Madrid, Spain.
     country: es
     details: |
