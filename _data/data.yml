@@ -34,7 +34,7 @@ skills:
       - Python
   - category: Frontend
     skill:
-      - Angular
+      - Vue.
       - Typescript
   - category: Relational databases
     skill:
@@ -61,14 +61,15 @@ profile: |
   Highly experienced software engineer who enjoy solving problems and building modern IT solutions. Team player. Eager to learn and share its expertise.
 
 experience:
-  - role: Java Developer
+  - role: Senior Software Engineer
     time: Mar.2023-Present
     company: OSP - Otto Group Solution Provider. Madrid, Spain.
     country: es
     details: |
-      Working in Logistics for WMS K.Motion.
+      Working in Logistics for WMS K.Motion and STARC.
     technologies_used: |
-      Oracle Database. Jenkins. Java. Apache Kafka. Maven. Spring Boot
+      <br/>- K.Motion: Oracle Database. Jenkins. Java. Apache Kafka. Maven. Spring Boot.
+      <br/>- STARC: TypeScript. Vue 3. Nuxt. Git. GitLab CI/CD. Docker.
 
   - role: Senior Software Engineer
     time: Jun.2014-Mar.2023
